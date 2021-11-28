@@ -8,7 +8,23 @@
 
 })(jQuery);
 
- 
+  // Choose Section and  MagnificPopup
+    // init Isotope
+    var $grid = $(".food_filter_row").isotope({
+      filter: '.Pasta'
+    });
+    // filter items on button click
+    $(".fillter_item_list").on("click", "li", function () {
+      var filterValue = $(this).attr("data-filter");
+      $grid.isotope({
+        filter: filterValue,
+      });
+    });
+    // filter items on button active class
+    $(".fillter_item_list").on("click", "li", function () {
+      $(this).addClass("food_active").siblings().removeClass("food_active");
+    });
+
 //Counter
 let visibilityIds = ['#counters_1', '#counters_2', '#counters_3'];
 let counterClass = '.counter';

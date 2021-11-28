@@ -83,7 +83,7 @@ p {
   font-family: Secondery-font-regular;
   font-size: 16px;
   font-weight: 400;
-  color: black;
+  color: #36435d;
 }
 
 img {
@@ -205,6 +205,44 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+.food_filter_wrapper .food_item_area, .blog_wrapper .blog_img {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out !important;
+  -webkit-transition: all 0.5s ease-in-out !important;
+  -moz-transition: all 0.5s ease-in-out !important;
+  -ms-transition: all 0.5s ease-in-out !important;
+  -o-transition: all 0.5s ease-in-out !important;
+}
+
+.food_filter_wrapper .food_item_area:hover::before, .blog_wrapper .blog_img:hover::before {
+  left: 200%;
+  opacity: 1;
+  visibility: visible;
+}
+
+.food_filter_wrapper .food_item_area::before, .blog_wrapper .blog_img::before {
+  content: " ";
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 120%;
+  background: #e5e5e547;
+  transform: skew(45deg);
+  -webkit-transform: skew(45deg);
+  -moz-transform: skew(45deg);
+  -ms-transform: skew(45deg);
+  -o-transform: skew(45deg);
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
 @media (max-width: 575px) {
   .container {
     padding-left: 16px;
@@ -214,6 +252,12 @@ input[type="number"] {
 
 .default_section_gap {
   margin-top: 130px;
+}
+
+@media (max-width: 767px) {
+  .default_section_gap {
+    margin-top: 80px;
+  }
 }
 
 .page_title {
@@ -235,6 +279,55 @@ input[type="number"] {
     font-size: 40px;
     line-height: 45px;
   }
+}
+
+.see_all_button {
+  display: inline-block;
+  background: #041434;
+  -webkit-box-shadow: 0px 10px 30px rgba(4, 20, 52, 0.1);
+          box-shadow: 0px 10px 30px rgba(4, 20, 52, 0.1);
+  border-radius: 46px;
+  -webkit-border-radius: 46px;
+  -moz-border-radius: 46px;
+  -ms-border-radius: 46px;
+  -o-border-radius: 46px;
+  margin-top: 80px;
+  font-family: Secondery-font-bold;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  color: #ffffff;
+  width: 180px;
+  height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.5s ease-in-out !important;
+  -webkit-transition: all 0.5s ease-in-out !important;
+  -moz-transition: all 0.5s ease-in-out !important;
+  -ms-transition: all 0.5s ease-in-out !important;
+  -o-transition: all 0.5s ease-in-out !important;
+}
+
+.see_all_button:hover {
+  color: #ffffff;
+  -webkit-box-shadow: 0px 10px 30px rgba(4, 20, 52, 0.3);
+          box-shadow: 0px 10px 30px rgba(4, 20, 52, 0.3);
+}
+
+.page_paragraph {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
 }
 
 /* ============ ScrollToUP Section =========== */
@@ -477,6 +570,12 @@ input[type="number"] {
   padding: 100px 0;
 }
 
+@media (max-width: 767px) {
+  .food_filter_wrapper {
+    padding: 70px 0;
+  }
+}
+
 .food_filter_wrapper .fillter_item_list {
   margin: 60px 0 40px 0;
   display: -webkit-box;
@@ -488,6 +587,12 @@ input[type="number"] {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 10px 15px;
+}
+
+@media (max-width: 767px) {
+  .food_filter_wrapper .fillter_item_list {
+    margin: 30px 0;
+  }
 }
 
 .food_filter_wrapper .fillter_item_list li {
@@ -555,11 +660,12 @@ input[type="number"] {
   bottom: 30px;
 }
 
-.food_filter_wrapper .food_item_content h3 a, .food_filter_wrapper .food_item_content h5 {
+.food_filter_wrapper .food_item_content h3 a,
+.food_filter_wrapper .food_item_content h5 {
   font-weight: bold;
   font-size: 24px;
   line-height: 24px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .food_filter_wrapper .food_item_content h3 a {
@@ -579,7 +685,7 @@ input[type="number"] {
   font-weight: bold;
   font-size: 14px;
   line-height: 12px;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 5px 10px;
 }
 
@@ -608,7 +714,97 @@ input[type="number"] {
   -o-transition: all 0.5s ease-in-out !important;
 }
 
-/* ============  Section =========== */
+/* ============  Blog Section =========== */
+.blog_wrapper .blog_row {
+  margin-top: 30px;
+}
+
+.blog_wrapper .blog_item {
+  padding: 0 10px 10px 10px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 18px 30px rgba(218, 222, 228, 0.2);
+          box-shadow: 0px 18px 30px rgba(218, 222, 228, 0.2);
+  margin-top: 30px;
+}
+
+.blog_wrapper .blog_item:hover .blog_content::before {
+  background-color: #ff5118;
+}
+
+.blog_wrapper .blog_img img {
+  height: 300px;
+}
+
+.blog_wrapper .blog_content {
+  position: relative;
+  padding: 0 10px 20px 10px;
+}
+
+.blog_wrapper .blog_content::before {
+  content: " ";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 5px;
+  height: 90%;
+  background: #041434;
+  -webkit-box-shadow: 0px 18px 30px rgba(198, 179, 179, 0.17);
+          box-shadow: 0px 18px 30px rgba(198, 179, 179, 0.17);
+  border-radius: 40px;
+}
+
+.blog_wrapper .blog_content h6 {
+  font-family: Secondery-font-regular;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #041434;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.blog_wrapper .blog_content h3 a {
+  font-family: Secondery-font-bold;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  color: #041434;
+}
+
+.blog_wrapper .blog_content h3 a:hover {
+  color: rgba(4, 20, 52, 0.705);
+}
+
+.blog_wrapper .blog_content p {
+  line-height: 30px;
+  color: #041434;
+  margin-top: 8px;
+  margin-bottom: 30px;
+}
+
+.blog_wrapper .blog_links {
+  font-family: Secondery-font-bold;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 12px;
+  border: 1px solid #041434;
+  filter: drop-shadow(0px 12px 42px rgba(163, 163, 163, 0.25));
+  border-radius: 3px;
+  -webkit-filter: drop-shadow(0px 12px 42px rgba(163, 163, 163, 0.25));
+  padding: 8px 19px;
+  color: #041434;
+  transition: all 0.5s ease-in-out !important;
+  -webkit-transition: all 0.5s ease-in-out !important;
+  -moz-transition: all 0.5s ease-in-out !important;
+  -ms-transition: all 0.5s ease-in-out !important;
+  -o-transition: all 0.5s ease-in-out !important;
+}
+
+.blog_wrapper .blog_links:hover {
+  color: white;
+  background-color: #041434;
+}
+
 /* ============  Section =========== */
 /* ============  Section =========== */
 /*# sourceMappingURL=style.css.map */
