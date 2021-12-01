@@ -251,8 +251,8 @@ input[type="number"] {
 
 @media (max-width: 575px) {
   .container {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
 }
 
@@ -1687,9 +1687,24 @@ input[type="number"] {
   }
 }
 
+.join_wrapper .join_footer_content {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 @media (max-width: 767px) {
   .join_wrapper .join_footer_content {
     padding-left: 20px;
+    margin-top: 20px;
   }
 }
 

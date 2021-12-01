@@ -266,8 +266,8 @@ input[type="number"] {
 
 .container {
   @include mediaMaxWidth(575px) {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
 }
 .default_section_gap {
@@ -1353,8 +1353,13 @@ input[type="number"] {
     }
   }
   .join_footer_content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     @include mediaMaxWidth(767px) {
       padding-left: 20px;
+      margin-top: 20px;
     }
     h2,
     p {
