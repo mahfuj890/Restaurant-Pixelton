@@ -66,6 +66,29 @@ var swiper = new Swiper(".hero_slider_wrapper .swiper", {
   },
 });
 
+//Blog Slider
+var swiper2 = new Swiper('.blog_row .swiper', {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  freeMode: true,
+  autoplay: {
+    delay: 5000,
+  },
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 576px
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+
+});
+
 // Choose Section and  MagnificPopup
 // init Isotope
 var $grid = $(".food_filter_row").isotope({
