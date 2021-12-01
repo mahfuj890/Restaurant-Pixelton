@@ -1842,6 +1842,14 @@ input[type="number"] {
   color: rgba(54, 67, 93, 0.842);
 }
 
+@media (max-width: 767px) {
+  .footer_wrapper .footer_copyright_area h6 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
 .footer_wrapper .footer_copyright_area ul {
   display: -webkit-box;
   display: -ms-flexbox;

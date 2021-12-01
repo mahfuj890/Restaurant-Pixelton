@@ -1457,6 +1457,12 @@ input[type="number"] {
         color: rgba(54, 67, 93, 0.842);
       }
     }
+    h6{
+      @include mediaMaxWidth(767px){
+     order: 2;
+
+      }
+    }
     ul {
       display: flex;
       align-items: center;
